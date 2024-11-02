@@ -249,6 +249,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/ssg/ta_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/ta_config.json \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/ssg/tz_whitelist.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/tz_whitelist.json \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/wfdconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wfdconfig.xml \
+    vendor/xiaomi/sm8450-common/proprietary/vendor/etc/xiaomi_ecc_list.xml:$(TARGET_COPY_OUT_VENDOR)/etc/xiaomi_ecc_list.xml \
+    vendor/xiaomi/sm8450-common/proprietary/vendor/etc/xiaomi_ecc_list_preference.xml:$(TARGET_COPY_OUT_VENDOR)/etc/xiaomi_ecc_list_preference.xml \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf \
     vendor/xiaomi/sm8450-common/proprietary/vendor/lib64/android.hardware.secure_element@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/android.hardware.secure_element@1.0-impl.so \
     vendor/xiaomi/sm8450-common/proprietary/vendor/lib64/btaudio_offload_if.so:$(TARGET_COPY_OUT_VENDOR)/lib64/btaudio_offload_if.so \
