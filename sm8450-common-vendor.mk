@@ -721,7 +721,7 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND \
     HotwordEnrollmentXGoogleHEXAGON_WIDEBAND \
     com.android.hotwordenrollment.common.util \
-    android.hardware.security.keymint-service-qti.xml \
+    android.hardware.security.keymint-service-qti-rkp.xml \
     dataconnection-saidl.xml \
     manifest_android.hardware.drm@1.4-service.widevine.xml \
     manifest_lahaina_identity.xml \
