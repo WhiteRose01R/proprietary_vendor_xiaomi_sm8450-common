@@ -459,7 +459,6 @@ PRODUCT_PACKAGES += \
     libwqe \
     libwvhidl \
     libxiaomi_qcril \
-    libxlog \
     libxml \
     libxtadapter \
     libxtwifi_server_protocol \
@@ -477,12 +476,8 @@ PRODUCT_PACKAGES += \
     sensors.ssc \
     sensors.touch.detect \
     sensors.ultrasoundproximity \
-    libasphere \
     libdlbvol \
     libhwdap \
-    libmisoundfx \
-    libqcomvoiceprocessing \
-    libshoebox \
     libswgamedap \
     libswspatializer \
     libswvqe \
