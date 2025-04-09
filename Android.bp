@@ -710,6 +710,23 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "jcos_nq_client-v1",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/jcos_nq_client-v1.so"],
+			shared_libs: ["libbase", "libcutils", "liblog", "libutils", "libchrome", "libhidlbase", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "lib-imscommon",
 	owner: "xiaomi",
 	strip: {
@@ -5184,6 +5201,23 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "ls_nq_client-v1",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/ls_nq_client-v1.so"],
+			shared_libs: ["libbase", "libcutils", "liblog", "libutils", "libchrome", "libhidlbase", "se_nq_extn_client-v1", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libwvdrmengine",
 	owner: "xiaomi",
 	strip: {
@@ -5347,6 +5381,23 @@ cc_prebuilt_library_shared {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/qtiwakelock.so"],
 			shared_libs: ["libcutils", "libqcrilNrQtiMutex", "libhardware_legacy", "libc++", "libc", "libm", "libdl", ],
+		},
+	},
+	compile_multilib: "64",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "se_nq_extn_client-v1",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/se_nq_extn_client-v1.so"],
+			shared_libs: ["libbase", "libcutils", "liblog", "libutils", "libchrome", "libhidlbase", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",
@@ -8619,7 +8670,7 @@ cc_prebuilt_binary {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/bin/hw/vendor.qti.secure_element@1.2-service"],
-			shared_libs: ["liblog", "libcutils", "libbase", "libutils", "libhardware", "se_nq_extn_client", "ls_nq_client", "jcos_nq_client", "libhidlbase", "android.hardware.secure_element@1.0", "android.hardware.secure_element@1.1", "android.hardware.secure_element@1.2", "vendor.qti.esepowermanager@1.0", "vendor.qti.esepowermanager@1.1", "android.hardware.secure_element@1.0-impl", "libc++", "libc", "libm", "libdl", ],
+			shared_libs: ["liblog", "libcutils", "libbase", "libutils", "libhardware", "se_nq_extn_client-v1", "ls_nq_client-v1", "jcos_nq_client-v1", "libhidlbase", "android.hardware.secure_element@1.0", "android.hardware.secure_element@1.1", "android.hardware.secure_element@1.2", "vendor.qti.esepowermanager@1.0", "vendor.qti.esepowermanager@1.1", "android.hardware.secure_element@1.0-impl", "libc++", "libc", "libm", "libdl", ],
 		},
 	},
 	compile_multilib: "64",

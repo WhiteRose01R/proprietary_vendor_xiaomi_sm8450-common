@@ -200,6 +200,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.soter@1.0-impl \
     vendor.qti.hardware.wifidisplaysession@1.0-impl \
     vendor.xiaomi.hw.touchfeature@1.0-impl \
+    jcos_nq_client-v1 \
     lib-imscommon \
     lib-imsdpl \
     lib-imsqimf \
@@ -463,6 +464,7 @@ PRODUCT_PACKAGES += \
     libxtadapter \
     libxtwifi_server_protocol \
     libxtwifi_server_protocol_uri_v3 \
+    ls_nq_client-v1 \
     libwvdrmengine \
     qcrilInterfaces \
     qcrilMarshal \
@@ -473,6 +475,7 @@ PRODUCT_PACKAGES += \
     qtiPeripheralMgr \
     qtiril-utils \
     qtiwakelock \
+    se_nq_extn_client-v1 \
     sensors.ssc \
     sensors.touch.detect \
     sensors.ultrasoundproximity \
