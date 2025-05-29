@@ -63,6 +63,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/imsdaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsdaemon.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/init.embmssl_server.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.embmssl_server.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/init.qdmastats.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qdmastats.rc \
+    vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/init.qti.media.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.media.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/init.qti.qcv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.qcv.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/init.time_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.time_daemon.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/init.vendor.ins.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.ins.rc \
@@ -73,6 +74,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/netmgrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netmgrd.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/port-bridge.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/port-bridge.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/qapeservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qapeservice.rc \
+    vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/qconfig.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qconfig.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/qcrilNrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qcrilNrd.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/qesdk-manager.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qesdk-manager.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/qmipriod.debug.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qmipriod.debug.rc \
@@ -99,6 +101,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.soter@1.0-service.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/vendor.qti.hardware.trustedui@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.trustedui@1.0-service-qti.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc \
+    vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/vendor.qti.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2@1.0-service.rc \
+    vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.media.c2audio@1.0-service.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/vendor.qti.rmt_storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.rmt_storage.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/vendor.qti.secure_element@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.secure_element@1.2-service.rc \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
@@ -141,6 +145,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/seccomp_policy/atfwd@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/atfwd@2.0.policy \
+    vendor/xiaomi/sm8450-common/proprietary/vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base-arm64.policy \
+    vendor/xiaomi/sm8450-common/proprietary/vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext-arm64.policy \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/seccomp_policy/imsrtp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/imsrtp.policy \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/seccomp_policy/modemManager.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/modemManager.policy \
     vendor/xiaomi/sm8450-common/proprietary/vendor/etc/seccomp_policy/qapeservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qapeservice.policy \
@@ -211,7 +217,11 @@ PRODUCT_PACKAGES += \
     lib-rtpcommon \
     lib-rtpcore \
     lib-rtpsl \
+    libAlacSwDec \
+    libApeSwDec \
+    libEvrcSwCodec \
     libFileMux_proprietary \
+    libFlacSwDec \
     libGPQTEEC_vendor \
     libGPTEE_vendor \
     libGPreqcancel \
@@ -220,6 +230,7 @@ PRODUCT_PACKAGES += \
     libQSEEComAPI \
     libQTEEConnector_listener \
     libQTEEConnector_vendor \
+    libQcelp13SwCodec \
     libQtiRilLoadable \
     libTouchInputVM \
     libTrustedInput \
@@ -341,13 +352,36 @@ PRODUCT_PACKAGES += \
     liboemcrypto \
     libops \
     libpal_net_if \
+    libpalclient \
     libpdmapper \
     libpdnotifier \
     libperipheral_client \
+    libqc2audio_base \
+    libqc2audio_basecodec \
+    libqc2audio_core \
+    libqc2audio_hooks \
+    libqc2audio_hwaudiocodec \
+    libqc2audio_platform \
+    libqc2audio_swaudiocodec \
+    libqc2audio_utils \
+    libqc2colorconvertfilter \
+    libqc2filter \
+    libqc2vppfilter \
     libqcbor \
     libqcc_file_agent \
     libqcci_legacy \
     libqcmaputils \
+    libqcodec2_base \
+    libqcodec2_basecodec \
+    libqcodec2_core \
+    libqcodec2_filterbase \
+    libqcodec2_hooks \
+    libqcodec2_mockfilter \
+    libqcodec2_mockqc2filter \
+    libqcodec2_platform \
+    libqcodec2_utils \
+    libqcodec2_v4l2codec \
+    libqconfigclient \
     libqcrilDataModule \
     libqcrilNr \
     libqcrilNrCellInfoModule \
@@ -428,6 +462,7 @@ PRODUCT_PACKAGES += \
     libtime_genoff \
     libtrustedapploader \
     libultrasound_notify \
+    libvideotxr \
     libvmmem \
     libvppclient \
     libvppcommon \
@@ -472,6 +507,7 @@ PRODUCT_PACKAGES += \
     qcril_client \
     qcrild_libqcrilnr \
     qcrild_libqcrilnrutils \
+    qti.video.utils.videobufferlayout \
     qtiPeripheralMgr \
     qtiril-utils \
     qtiwakelock \
@@ -540,6 +576,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.qccsyshal@1.1_vendor \
     vendor.qti.hardware.qccvndhal@1.0-halimpl \
     vendor.qti.hardware.qccvndhal@1.0_vendor \
+    vendor.qti.hardware.qconfig@1.0 \
     vendor.qti.hardware.qseecom@1.0 \
     vendor.qti.hardware.qteeconnector@1.0 \
     vendor.qti.hardware.radio.am@1.0_vendor \
@@ -581,6 +618,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.trustedui@1.1 \
     vendor.qti.hardware.trustedui@1.2 \
     vendor.qti.hardware.tui_comm@1.0 \
+    vendor.qti.hardware.vpp@1.1 \
+    vendor.qti.hardware.vpp@1.2 \
+    vendor.qti.hardware.vpp@1.3 \
+    vendor.qti.hardware.vpp@2.0 \
     vendor.qti.hardware.wifidisplaysession@1.0_vendor \
     vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl \
     vendor.qti.ims.callcapability@1.0_vendor \
@@ -623,6 +664,8 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentYGoogleHEXAGON_WIDEBAND \
     com.android.hotwordenrollment.common.util \
     android.hardware.security.keymint-service-qti-rkp.xml \
+    c2_manifest_vendor.xml \
+    c2_manifest_vendor_audio.xml \
     dataconnection-saidl.xml \
     manifest_android.hardware.drm@1.4-service.widevine.xml \
     manifest_lahaina_identity.xml \
@@ -634,7 +677,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.diag.hal.service.xml \
     vendor.qti.gnss-service.xml \
     vendor.qti.hardware.limits-service.xml \
+    vendor.qti.hardware.qconfig@1.0-service.xml \
     vendor.qti.hardware.radio.ims.xml \
+    vendor.qti.hardware.vpp@2.0-service.xml \
     vendor.xiaomi.hw.touchfeature@1.0-service.xml \
     vendor.xiaomi.sensor.citsensorservice@2.0-service.xml \
     vendor.xiaomi.sensor.communicate@1.0_manifest.xml \
@@ -659,6 +704,7 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1-service-qti \
     android.hardware.security.keymint-service-qti \
     dolbycodec2 \
+    qconfigservice \
     qcrilNrd \
     vendor.dolby.hardware.dms@2.0-service \
     vendor.dolby.media.c2@1.0-service \
@@ -671,12 +717,15 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.soter@1.0-service \
     vendor.qti.hardware.trustedui@1.0-service-qti \
     vendor.qti.hardware.tui_comm@1.0-service-qti \
+    vendor.qti.media.c2@1.0-service \
+    vendor.qti.media.c2audio@1.0-service \
     vendor.qti.secure_element@1.2-service \
     vendor.xiaomi.hw.touchfeature@1.0-service \
     vendor.xiaomi.sensor.communicate@1.0-service \
     ims_rtp_daemon \
     imsdaemon \
     init.qcom.sensors \
+    init.qti.media \
     init.qti.qcv \
     irsc_util \
     loc_launcher \
